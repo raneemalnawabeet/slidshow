@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title> slidshow for iTeam  </title>
+        <link rel="stylesheet"
+        type="text/css"
+        href="imgS.css"/>
+        <script>
+            var x=0; //the first value (starting point)
+            var images =[];
+            var time=2000;
+            // images in the array
+            images[0]='iteam.jpg';
+            images[1]='iteam1.jpg';
+            images[2]='iteam2.jpg';
+            images[3]='iteam3.jpg';
+            images[4]='iteam4.jpg';
+            images[5]='iteam5.jpg';
+            images[6]='iteam6.jpg';
+            
+            //images change functions' 
+            function changeImg(){
+                document.slidshow.src = images[x];
+                if(x<images.length -1){
+                    x++; }
+                    else {
+                        x=0;
+                    }
+setTimeout("changeImg()",time);
+            }
+window.onload=changeImg;
+
+        </script>
+
+    </head>
+    <body>
+        <img name="slidshow">
+        <p style="text-align: center">
+            iTeam pictures
+        </p>
+        
+    </body>
+</html>
